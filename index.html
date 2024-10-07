@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -191,7 +191,7 @@
     </header>
     <main>
       <p class="p-fecha">
-        Ciudad Autónoma de Buenos Aires, XXXX X de XXXX de 2024
+        Ciudad Autónoma de Buenos Aires, <span th:text="${dia}">XXXX</span> X de XXXX de 2024
       </p>
       <p>
         En la Ciudad de Buenos Aires, el abajo firmante, inspector de la
