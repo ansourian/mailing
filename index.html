@@ -166,6 +166,11 @@
         border: 1px solid #153244;
         border-radius: 50px;
       }
+
+      .span {
+        margin: 0 0.2rem;
+      }
+
     </style>
     <title>Mail</title>
   </head>
@@ -191,21 +196,28 @@
     </header>
     <main>
       <p class="p-fecha">
-        Ciudad Autónoma de Buenos Aires, <span th:text="${dia}">XXXX</span> X de XXXX de 2024
+        Ciudad Autónoma de Buenos Aires,
+        <span class="span" th:text="${dia_texto}">XXXX</span>
+        <span class="span" th:text="${dia}">X</span> de <span class="span" th:text="${mes}">XXXX</span> de
+        2024
       </p>
       <p>
         En la Ciudad de Buenos Aires, el abajo firmante, inspector de la
         Dirección General de Obras en Vías Peatonales, conforme Decreto N°
-        264-GCABA/24, me constituí en la calle XXXX N° XX, sobre la cual se
-        registra el permiso de apertura N° XXXXXXX solicitado por XXXXXXXX, y se
-        constató la existencia de un cierre defectuoso. La situación descripta
-        puede comprometer la transitabilidad de la vereda y representar un
-        peligro inminente para los transeúntes, por lo que corresponde, en
-        virtud del Art. 1.9 del Anexo V de la Resolución N° 459-MEPHUGC/24,
-        NOTIFICAR a la empresa XXXXXX, para que en el plazo máximo de treinta
-        (30) días, proceda a corregir o subsanar el citado frente, conforme
-        requerimientos técnicos de la normativa de aperturas citada, la Ley N°
-        5901 y concordantes.
+        264-GCABA/24, me constituí en la calle
+        <span th:text="${calle}">XXXX</span> N°
+        <span th:text="${nro_calle}">XXXX</span>, sobre la cual se registra el
+        permiso de apertura N°
+        <span th:text="${apertura_nro}">XXXX</span> solicitado por
+        <span th:text="${solicitado}">XXXX</span>, y se constató la existencia
+        de un cierre defectuoso. La situación descripta puede comprometer la
+        transitabilidad de la vereda y representar un peligro inminente para los
+        transeúntes, por lo que corresponde, en virtud del Art. 1.9 del Anexo V
+        de la Resolución N° 459-MEPHUGC/24, NOTIFICAR a la empresa
+        <span th:text="${nombre_empresa}">XXXX</span>, para que en el plazo
+        máximo de treinta (30) días, proceda a corregir o subsanar el citado
+        frente, conforme requerimientos técnicos de la normativa de aperturas
+        citada, la Ley N° 5901 y concordantes.
       </p>
       <p>
         En caso contrario, se lo considerará como un incumplimiento en los
