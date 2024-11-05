@@ -171,6 +171,145 @@
         margin: 0 0.2rem;
       }
 
+      /* @media (max-width: 1250px) {
+
+        .header-title {
+          display: flex;
+          flex-direction: row;
+          background-color: #ffcc00;
+          margin: 0;
+          padding: 1rem 2rem;
+          width: 97%;
+          height: 85px;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 0 0 25px 0;
+          position: absolute;
+          z-index: 3;
+          top: 0;
+        }
+
+        .header-title2 {
+          display: flex;
+          flex-direction: row;
+          background-color: #8de2d6;
+          margin: 0;
+          width: 97%;
+          height: 85px;
+          align-items: center;
+          border-radius: 0 0 25px 0;
+          position: absolute;
+          z-index: 2;
+          top: 0;
+        }
+
+        .header-title3 {
+          display: flex;
+          flex-direction: row;
+          background-color: #153244;
+          margin: 0;
+          width: 100%;
+          height: 85px;
+          align-items: center;
+          border-radius: 0 0 25px 0;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+        }
+
+        .h1-header {
+          font-size: 1rem;
+          width: 400px;
+          font-family: "Open Sans", sans-serif;
+          color: #153244;
+        }
+
+        p {
+          color: #153244;
+          margin: 0.5rem 0;
+          font-size: 0.7rem;
+          font-family: "Open Sans", sans-serif;
+        }
+
+        h2 {
+          color: #153244;
+          font-weight: 200;
+          font-size: 1rem;
+        }
+
+        .ba-logo_header {
+          width: auto;
+          height: 40px;
+        }
+
+        main {
+          margin: 6rem 4rem 0;
+        }
+
+        .p-fecha {
+          display: flex;
+          justify-content: right;
+          font-weight: 700;
+          font-size: 0.7rem;
+          margin: 1rem 0;
+        }
+
+        .p-cargo {
+          display: flex;
+          justify-content: right;
+          margin: 0;
+        }
+
+        .ba-logo_footer {
+          height: auto;
+          width: 100px;
+          margin: 1rem auto;
+          visibility: hidden;
+        }
+
+        footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          z-index: 10;
+        }
+
+        .footer-socials {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 60px;
+          background-color: #8de2d6;
+          border-radius: 25px 25px 0 0;
+        }
+
+        .button-socials {
+          padding: 0.5rem;
+          color: #153244;
+          width: 2rem;
+          height: 2rem;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .a-socials {
+          text-decoration: none;
+          margin: 1rem;
+          border: 1px solid #153244;
+          border-radius: 50px;
+        }
+
+        .span {
+          margin: 0 0.2rem;
+        }
+      } */
     </style>
     <title>Email Acta Comprobación DGOVP</title>
   </head>
@@ -181,7 +320,7 @@
           <div class="header-title">
             <div class="header-texts">
               <h1 class="h1-header">
-                Subsecretaría de Mantenimiento Urbano Dirección General Obras
+                Subsecretaría de Mantenimiento Dirección General Obras
                 Vías Peatonales
               </h1>
               <h2>Av. Martín García 346, 3º Piso, CABA</h2>
@@ -197,23 +336,24 @@
     <main>
       <p class="p-fecha">
         Ciudad Autónoma de Buenos Aires,
-        <span class="span" th:text="${dia_texto}">XXXX</span>
-        <span class="span" th:text="${dia}">X</span> de <span class="span" th:text="${mes}">XXXX</span> de
+        <!-- <span class="span" th:text="${dia_texto}">XXXX</span> -->
+        <span class="span" th:text="${dia}">X</span> de
+        <span class="span" th:text="${mes}">X</span> de
         <span class="span" th:text="${ano}">XXXX</span>
       </p>
       <p>
         En la Ciudad de Buenos Aires, el abajo firmante, inspector de la
         Dirección General de Obras en Vías Peatonales, conforme Decreto N°
         264-GCABA/24, me constituí en la calle
-        <span th:text="${calle_altura}">XXXX</span>, sobre la cual se registra el
-        permiso de apertura N°
+        <span th:text="${calle}">XXXX</span> Nº<span th:text="${altura}">XXXX</span>, sobre la cual se registra
+        el permiso de apertura N°
         <span th:text="${apertura_nro}">XXXX</span> solicitado por
         <span th:text="${solicitado}">XXXX</span>, y se constató la existencia
-        de un cierre defectuoso. La situación descripta puede comprometer la
+        de un cierre defectuoso en la posición Nº <span th:text="${posicion}">XXXX</span>. La situación descripta puede comprometer la
         transitabilidad de la vereda y representar un peligro inminente para los
         transeúntes, por lo que corresponde, en virtud del Art. 1.9 del Anexo V
         de la Resolución N° 459-MEPHUGC/24, NOTIFICAR a la empresa
-        <span th:text="${nombre_empresa}">XXXX</span>, para que en el plazo
+        <span th:text="${nombre_empresa}">XXXX</span> y a la contratista <span th:text="${nombre_contratista}">XXXX</span>, para que en el plazo
         máximo de treinta (30) días, proceda a corregir o subsanar el citado
         frente, conforme requerimientos técnicos de la normativa de aperturas
         citada, la Ley N° 5901 y concordantes.
