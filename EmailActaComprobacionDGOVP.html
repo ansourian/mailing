@@ -119,7 +119,13 @@
       .p-cargo {
         display: flex;
         justify-content: right;
-        margin: 2rem 0;
+        margin: 2rem 0 0;
+      }
+
+      .p-cuit {
+        display: flex;
+        justify-content: right;
+        margin: 0 0 2rem;
       }
 
       .ba-logo_footer {
@@ -260,6 +266,12 @@
           margin: 0;
         }
 
+        .p-cuit {
+          display: flex;
+          justify-content: right;
+          margin: 0;
+        }
+
         .ba-logo_footer {
           height: auto;
           width: 100px;
@@ -363,7 +375,8 @@
         términos del apartado 9.4, del Anexo II aprobado mediante la Resolución
         N.° 459-GCABA-MEPHUGC/2024
       </p>
-      <p class="p-cargo">Cargo y firma del inspector oficial que verificó</p>
+      <p class="p-cargo"><span th:text="${cargo}">Inspector</span>: <span th:text="${nombre_inspector}">Marco Aurelio</span></p>
+      <p class="p-cuit"><span th:text="${cuit_inspector}">20337554579</span></p>
     </main>
     <footer>
       <img
