@@ -177,8 +177,7 @@
         margin: 0 0.2rem;
       }
 
-      /* @media (max-width: 1250px) {
-
+      @media (max-width: 1250px) {
         .header-title {
           display: flex;
           flex-direction: row;
@@ -321,7 +320,7 @@
         .span {
           margin: 0 0.2rem;
         }
-      } */
+      }
     </style>
     <title>Email Acta Comprobación DGOVP</title>
   </head>
@@ -332,8 +331,8 @@
           <div class="header-title">
             <div class="header-texts">
               <h1 class="h1-header">
-                Subsecretaría de Mantenimiento Dirección General Obras
-                Vías Peatonales
+                Subsecretaría de Mantenimiento Dirección General Obras Vías
+                Peatonales
               </h1>
               <h2>Av. Martín García 346, 3º Piso, CABA</h2>
             </div>
@@ -361,11 +360,13 @@
         el permiso de apertura N°
         <span th:text="${apertura_nro}">XXXX</span> solicitado por
         <span th:text="${solicitado}">XXXX</span>, y se constató la existencia
-        de un cierre defectuoso en la posición Nº <span th:text="${posicion}">XXXX</span>. La situación descripta puede comprometer la
-        transitabilidad de la vereda y representar un peligro inminente para los
-        transeúntes, por lo que corresponde, en virtud del Art. 1.9 del Anexo V
-        de la Resolución N° 459-MEPHUGC/24, NOTIFICAR a la empresa
-        <span th:text="${nombre_empresa}">XXXX</span> y a la contratista <span th:text="${nombre_contratista}">XXXX</span>, para que en el plazo
+        de un cierre defectuoso en la posición Nº
+        <span th:text="${posicion}">XXXX</span>. La situación descripta puede
+        comprometer la transitabilidad de la vereda y representar un peligro
+        inminente para los transeúntes, por lo que corresponde, en virtud del
+        Art. 1.9 del Anexo V de la Resolución N° 459-MEPHUGC/24, NOTIFICAR a la
+        empresa <span th:text="${nombre_empresa}">XXXX</span> y a la contratista
+        <span th:text="${nombre_contratista}">XXXX</span>, para que en el plazo
         máximo de treinta (30) días, proceda a corregir o subsanar el citado
         frente, conforme requerimientos técnicos de la normativa de aperturas
         citada, la Ley N° 5901 y concordantes.
@@ -375,7 +376,10 @@
         términos del apartado 9.4, del Anexo II aprobado mediante la Resolución
         N.° 459-GCABA-MEPHUGC/2024
       </p>
-      <p class="p-cargo"><span th:text="${cargo}">XXXX</span>: <span th:text="${nombre_inspector}">XXXX</span></p>
+      <p class="p-cargo">
+        <span th:text="${cargo}">XXXX</span>:
+        <span th:text="${nombre_inspector}">XXXX</span>
+      </p>
       <p class="p-cuit"><span th:text="${cuit_inspector}">XXXX</span></p>
     </main>
     <footer>
