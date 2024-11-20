@@ -35,7 +35,7 @@
         }
       }
 
-      span{
+      span {
         font-weight: bold;
       }
 
@@ -46,11 +46,11 @@
         margin: 0;
         padding: 1rem 2rem;
         width: 97%;
-        height: 150px;
+        height: 100%;
         justify-content: space-between;
         align-items: center;
         border-radius: 0 0 25px 0;
-        position: absolute;
+        position: relative;
         z-index: 3;
         top: 0;
       }
@@ -61,10 +61,10 @@
         background-color: #8de2d6;
         margin: 0;
         width: 97%;
-        height: 150px;
+        height: 100%;
         align-items: center;
         border-radius: 0 0 25px 0;
-        position: absolute;
+        position: relative;
         z-index: 2;
         top: 0;
       }
@@ -75,10 +75,10 @@
         background-color: #153244;
         margin: 0;
         width: 100%;
-        height: 150px;
+        height: 100%;
         align-items: center;
         border-radius: 0 0 25px 0;
-        position: absolute;
+        position: relative;
         z-index: 1;
         top: 0;
       }
@@ -116,7 +116,7 @@
       }
 
       main {
-        margin: 10rem 6rem 0;
+        margin: 3rem 6rem 0;
       }
 
       .p-fecha {
@@ -194,13 +194,11 @@
           flex-direction: row;
           background-color: #ffcc00;
           margin: 0;
-          padding: 1rem 2rem;
+          padding: 1rem;
           width: 97%;
-          height: 105px;
           justify-content: space-between;
           align-items: center;
           border-radius: 0 0 25px 0;
-          position: absolute;
           z-index: 3;
           top: 0;
         }
@@ -211,10 +209,10 @@
           background-color: #8de2d6;
           margin: 0;
           width: 97%;
-          height: 105px;
+          height: 100%;
           align-items: center;
           border-radius: 0 0 25px 0;
-          position: absolute;
+          position: relative;
           z-index: 2;
           top: 0;
         }
@@ -225,25 +223,29 @@
           background-color: #153244;
           margin: 0;
           width: 100%;
-          height: 105px;
+          /* height: fit-content; */
           align-items: center;
           border-radius: 0 0 25px 0;
-          position: absolute;
+          position: relative;
           z-index: 1;
           top: 0;
         }
 
         .h1-header {
           font-size: 1.2rem;
-          width: 500px;
+          width: auto;
           font-family: "Open Sans", sans-serif;
           color: #153244;
         }
         .h1-header2 {
           font-size: 1rem;
-          width: 500px;
+          width: auto;
           font-family: "Open Sans", sans-serif;
           color: #153244;
+        }
+
+        .h2-header {
+          font-size: 1rem;
         }
 
         p {
@@ -260,12 +262,19 @@
         }
 
         .ba-logo_header {
-          width: auto;
-          height: 40px;
+          width: 30%;
+          height: auto;
+        }
+
+        .header-texts{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 70%;
         }
 
         main {
-          margin: 8rem 4rem 0;
+          margin: 3rem 3rem 6rem;
         }
 
         .p-fecha {
@@ -350,13 +359,11 @@
               <h1 class="h1-header">
                 Ministerio de Espacio Público e Higiene Urbana
               </h1>
-              <h1 class="h1-header2">
-                Subsecretaría de Mantenimiento
-              </h1>
+              <h1 class="h1-header2">Subsecretaría de Mantenimiento</h1>
               <h1 class="h1-header2">
                 Dirección General Obras Vías Peatonales
               </h1>
-              <h2>Av. Martín García 346, 3º Piso, CABA</h2>
+              <h2 class="h2-header">Av. Martín García 346, 3º Piso, CABA</h2>
             </div>
             <img
               class="ba-logo_header"
